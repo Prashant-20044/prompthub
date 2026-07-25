@@ -2,11 +2,15 @@ import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 import { typeDefs, resolvers } from './schema.js';
 
+import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin/landingPage/default';
+
 // The ApolloServer constructor requires two parameters: your schema
 // definition and your set of resolvers.
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  introspection: true,
+  plugins: [ApolloServerPluginLandingPageLocalDefault({ footer: false })],
 });
 
 // Passing an ApolloServer instance to the `startStandaloneServer` function:
