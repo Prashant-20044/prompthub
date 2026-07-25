@@ -1,0 +1,18 @@
+{
+  "name": "graphql-prompt-hub",
+  "version": "1.0.0",
+  "description": "A GraphQL API for an AI Prompt sharing community",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "graphql": "^16.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
